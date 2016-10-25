@@ -1,6 +1,3 @@
-// View complete tutorial with explanation on Codingeek - 
-// http://www.codingeek.com/data-structure/priority-queue-introduction-explanation-and-implementation/
-
 #include<stdio.h>
 #include<stdlib.h>
  
