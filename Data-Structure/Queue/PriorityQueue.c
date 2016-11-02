@@ -2,6 +2,7 @@
 #include<stdlib.h>
  
 typedef struct priorityQueueNode{
+    int test;
     int item;
     int priority;
     struct priorityQueueNode *next;
