@@ -59,7 +59,15 @@ void breadthFirstTraversing(Node *p){
     if(!p)
         return ;
  
-    for( i = 1; i <= maxLevel; i++) printLevelKey(p, i); } int main(void){ Node *root; root = newNode(10); root->left = newNode(20);
+    for (i = 1; i <= maxLevel; i++) {
+        printLevelKey(p, i);
+        
+    }
+}
+int main(void) {
+    Node *root;
+    root = newNode(10);
+    root -> left = newNode(20);
     root->right = newNode(30);
  
     root->left->left = newNode(40);
