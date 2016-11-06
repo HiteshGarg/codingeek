@@ -8,8 +8,8 @@ public class BeautifulArrangement {
 
     static int count;
 
-    public static void main(String... args) {
-        System.out.println("Print numbers");
+    public static void main(String[] args) {
+        System.out.println("Enter number (1-20) ");
         final Scanner sc = new Scanner(System.in);
         final int number = sc.nextInt();
         final List<Integer> availableNumbers = new ArrayList<>();
@@ -18,9 +18,9 @@ public class BeautifulArrangement {
         }
         if (number >= 1) {
             findArrangement(1, availableNumbers, number);
-            System.out.println("Possible -" + count);
+            System.out.println("Possible number of arrangements - " + count);
         } else {
-            System.out.println("Possible " + 0);
+            System.out.println("Possible number of arrangements - " + 0);
         }
     }
 
