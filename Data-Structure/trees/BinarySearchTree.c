@@ -5,7 +5,7 @@ typedef struct node{
 	int key;
 	struct node *left;
 	struct node *right;
-	}Node;
+}Node;
 
 /*for creating new node */	
 Node * newNode(int key){
@@ -17,9 +17,9 @@ Node * newNode(int key){
 	temp->right = NULL;
 	
 	return temp;
-	}
+}
 
-/*for inserting the key, nwNode is the node needed to be inserted */	
+/*for inserting the key, newNode is the node needed to be inserted */	
 Node * insert(Node *p, Node *nwNode){
 
 	if(!p){
@@ -44,7 +44,7 @@ Node * insert(Node *p, Node *nwNode){
 void search(Node *p, int searchKey){
 
 	if(!p){
-		printf("No such key\n");
+		printf("No key found for value - %d.\n", searchKey);
 		return ;
 	}	
 	
@@ -66,14 +66,14 @@ Node * getInSuccessor(Node *p){
 		p = p->left;  //this will give the minimum key
 
 	return p;	
-	}
+}
 	
 Node * deletion(Node *p, int delKey){
 
 	struct node *temp;
 
 	if(!p){
-		printf("No such key\n");
+		printf("Unable to delete. No such key exists.\n");
 		return p;
 	}	
 
@@ -97,11 +97,22 @@ Node * deletion(Node *p, int delKey){
       }
 	
      /* node with two children, interchange with inorder successor */
-      temp = getInSuccessor(p->right);
-		p->key = temp->key;
-      p->right = deletion(p->right, temp->key); // Delete the inorder successor
+	temp = getInSuccessor(p->right);
+	p->key = temp->key;
+	p->right = deletion(p->right, temp->key); // Delete the inorder successor
    }
    return p;
+}
+
+/* Preorder traversal that outputs key in non-decreasing order*/
+void traversePreorder(Node *p){
+
+	if(!p)
+		return ;
+
+	printf("%d ", p->key);
+	traversePreorder(p->left);
+	traversePreorder(p->right);
 }
 
 /* Inorder traversal that outputs key in non-decreasing order*/
@@ -113,6 +124,17 @@ void traverseInorder(Node *p){
 	traverseInorder(p->left);
 	printf("%d ", p->key);
 	traverseInorder(p->right);
+}
+
+/* Postorder traversal that outputs key in non-decreasing order*/
+void traversePostorder(Node *p){
+
+	if(!p)
+		return ;
+
+	traversePostorder(p->left);
+	traversePostorder(p->right);
+	printf("%d ", p->key);
 }
 	
 int main(void){
@@ -129,11 +151,18 @@ int main(void){
 	search(root, 50);
 	search(root, 10);
 	
-	deletion(root, 50);
+	Node *newRoot = deletion(root, 50);
+	if(newRoot){
+		printf("Successfully deleted node. Now tree root node is - %d.\n", newRoot->key);
+	}
 	search(root, 50);
 
-	printf("Inorder Traversal: ");
+	printf("Preorder Traversal: ");
+	traversePreorder(root);	
+	printf("\nInorder Traversal: ");
 	traverseInorder(root);	
+	printf("\nPostorder Traversal: ");
+	traversePostorder(root);	
 	
 	return 0;
 }
