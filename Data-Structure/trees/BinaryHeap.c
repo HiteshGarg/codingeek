@@ -17,8 +17,7 @@ void swap(int *, int *);
 void printHeap(Heap *);
 	
 /* on calling it, creates a heap data structure*/	
-Heap *createHeap(unsigned short capacity){
-	
+Heap *createHeap(unsigned short capacity){	
 	Heap *maxHeap;
 	maxHeap = (Heap *)malloc(sizeof(Heap));
 	maxHeap->heap = (int *)malloc( sizeof(int)*capacity );
@@ -26,7 +25,6 @@ Heap *createHeap(unsigned short capacity){
 	maxHeap->heapSize = 0;
 	
 	return maxHeap;
-	
 }
 			
 void swap(int *p, int *q){
@@ -38,7 +36,6 @@ void swap(int *p, int *q){
 	
 /* inserting key to maxHeap, this would take O(logn)*/	
 Heap * insert(Heap *maxHeap, int key){
-	
 	int temp = maxHeap->heapSize;
 	
 	if(maxHeap->heapSize == maxHeap->capacity)
@@ -64,7 +61,6 @@ Heap * insert(Heap *maxHeap, int key){
 }
 /*increasing the a key at given index */
 Heap *increaseKey(Heap *maxHeap, int nKey, int index){
-
 	int temp;
 	
 	if(maxHeap->heap[index] >= nKey)
@@ -106,7 +102,6 @@ Heap *maxHeapify(Heap *maxHeap, int i){
 }		
 /*it extracts the maxkey of the heap, which will be at root(index 0) */
 Heap *extractMax(Heap *maxHeap){
-	
 	int temp, extractedKey;
 	
 	if(maxHeap->heapSize == 0){
@@ -132,7 +127,7 @@ int getMax(Heap *maxHeap){
 }
 
 void printHeap(Heap *maxHeap){
-	 int i;
+	int i;
 	printf("\nKeys in Heap:");
 	for( i = 0; i < maxHeap->heapSize; i++ )
 		printf("%d ", maxHeap->heap[i]);
@@ -146,8 +141,7 @@ int main(void){
 	unsigned short capacity  = 10; //max size of heap is 10
 	maxHeap = createHeap(capacity);
 	
-	
-/* creating a heap with 5, 10, 40, 30, 20*/
+	/* creating a heap with 5, 10, 40, 30, 20*/
 	maxHeap = insert(maxHeap, 5);
 	maxHeap = insert(maxHeap, 10);
 	maxHeap = insert(maxHeap, 40);
