@@ -14,6 +14,7 @@ Heap *insert(Heap *, int );
 Heap *extractMax(Heap *);
 int getMax(Heap *);
 void swap(int *, int *);
+void printHeap(Heap *);
 	
 /* on calling it, creates a heap data structure*/	
 Heap *createHeap(unsigned short capacity){
@@ -26,18 +27,17 @@ Heap *createHeap(unsigned short capacity){
 	
 	return maxHeap;
 	
-	}
+}
 			
 void swap(int *p, int *q){
 	int temp;
 	temp = *p;
 	*p = *q;
 	*q = temp;
-	}
+}
 	
 /* inserting key to maxHeap, this would take O(logn)*/	
 Heap * insert(Heap *maxHeap, int key){
-	
 	
 	int temp = maxHeap->heapSize;
 	
@@ -57,11 +57,11 @@ Heap * insert(Heap *maxHeap, int key){
 	while(maxHeap->heap[(temp-1)/2] < key && temp != 0){
 		maxHeap->heap[temp] = maxHeap->heap[(temp-1)/2];
 		temp = (temp-1)/2;
-		}
+	}
 	maxHeap->heap[temp] = key;
 	
 	return maxHeap;
-	}
+}
 /*increasing the a key at given index */
 Heap *increaseKey(Heap *maxHeap, int nKey, int index){
 
@@ -75,15 +75,14 @@ Heap *increaseKey(Heap *maxHeap, int nKey, int index){
 		while(maxHeap->heap[(temp-1)/2] < nKey && temp != 0){
 			maxHeap->heap[temp] = maxHeap->heap[(temp-1)/2];
 			temp = (temp-1)/2;
-			}
-		maxHeap->heap[temp] = nKey;
 		}
+		maxHeap->heap[temp] = nKey;
+	}
 		
 	return maxHeap;	
-	}	
+}	
 	
 Heap *maxHeapify(Heap *maxHeap, int i){
-	
 	
 	int L, R, largest; // L as left, R as right
 	
@@ -102,9 +101,9 @@ Heap *maxHeapify(Heap *maxHeap, int i){
 	if(largest != i){
 		swap(&(maxHeap->heap[i]), &(maxHeap->heap[largest]));
 		maxHeapify(maxHeap, largest);
-		}
+	}
 	return maxHeap;
-	}		
+}		
 /*it extracts the maxkey of the heap, which will be at root(index 0) */
 Heap *extractMax(Heap *maxHeap){
 	
@@ -113,7 +112,7 @@ Heap *extractMax(Heap *maxHeap){
 	if(maxHeap->heapSize == 0){
 		printf("\nHeap Underflow");
 		return maxHeap;
-		}
+	}
 	else{
 		temp = maxHeap->heapSize-1;
 		//swaping lastKey to root and decreasing the heapSize by 1
@@ -125,16 +124,23 @@ Heap *extractMax(Heap *maxHeap){
 		
 		printf("\nKey Extracted:%d", extractedKey);
 		return maxHeap;
-		}
 	}
+}
 	
 int getMax(Heap *maxHeap){
 	return maxHeap->heap[0];
-	}
-		
+}
+
+void printHeap(Heap *maxHeap){
+	 int i;
+	printf("\nKeys in Heap:");
+	for( i = 0; i < maxHeap->heapSize; i++ )
+		printf("%d ", maxHeap->heap[i]);
+}
+
 int main(void){
 	
-	int getMaxKey; int i;
+	int getMaxKey;
 	
 	Heap *maxHeap;
 	unsigned short capacity  = 10; //max size of heap is 10
@@ -148,28 +154,22 @@ int main(void){
 	maxHeap = insert(maxHeap, 30);
 	maxHeap = insert(maxHeap, 20);
 		
-	printf("\nKeys in Heap:");
-	for( i = 0; i < maxHeap->heapSize; i++ )
-		printf("%d ", maxHeap->heap[i]);
+	printHeap(maxHeap);
 	
 	getMaxKey = getMax(maxHeap);
 	printf("\nMaxKey: %d\n",getMaxKey);
 	
 	maxHeap = increaseKey(maxHeap, 7, 2); //increaseKey(Heap* ,nKey, index )	
-	printf("\nKeys in Heap:");
-	for( i = 0; i < maxHeap->heapSize; i++ )
-		printf("%d ", maxHeap->heap[i]);
+	printHeap(maxHeap);
+	
+	maxHeap = increaseKey(maxHeap, 2, 35); //increaseKey(Heap* ,nKey, index )	
+	printHeap(maxHeap);
 		
 	maxHeap = increaseKey(maxHeap, 50, 1);
-	printf("\nKeys in Heap:");
-	for( i = 0; i < maxHeap->heapSize; i++ )
-		printf("%d ", maxHeap->heap[i]);	
+	printHeap(maxHeap);	
 	
 	maxHeap = extractMax(maxHeap);
-	printf("\nKeys in Heap:");
-	for( i = 0; i < maxHeap->heapSize; i++ )
-		printf("%d ", maxHeap->heap[i]);
+	printHeap(maxHeap);
 		
-	
 	return 0;
 }
