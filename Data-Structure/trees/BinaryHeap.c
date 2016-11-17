@@ -155,9 +155,6 @@ int main(void){
 	
 	maxHeap = increaseKey(maxHeap, 7, 2); //increaseKey(Heap* ,nKey, index )	
 	printHeap(maxHeap);
-	
-	maxHeap = increaseKey(maxHeap, 2, 35); //increaseKey(Heap* ,nKey, index )	
-	printHeap(maxHeap);
 		
 	maxHeap = increaseKey(maxHeap, 50, 1);
 	printHeap(maxHeap);	
