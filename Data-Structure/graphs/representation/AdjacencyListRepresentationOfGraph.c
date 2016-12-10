@@ -5,17 +5,17 @@
 typedef struct linkedListNode{   
 	int vertex;                             
 	struct linkedListNode *next;
-	}listNode;
+}listNode;
 
 typedef struct adjecencyList{
 	listNode *head;
-	}adjList;	
+}adjList;	
 	
 typedef struct graph{
 	int nVertices;   //number of vertices in the graph
 	int nEdges;      //number of vertices in the graph
 	adjList *array;  // array of adjacency list
-	}Graph;
+}Graph;
 	
 Graph *addEdge(Graph *, int , int );
 Graph *createAdjListOfGraph(Graph *);
@@ -43,11 +43,11 @@ Graph *createAdjListOfGraph(Graph *g){
 		printf("Reading the endpoints of an edge(u v):\n");
 		scanf("%d %d", &u, &v);
 		g = addEdge(g, u, v);
-		
-		}
+    }
 			
 	return g;
-	}
+}
+
 /* adding edge whose endpoints are u and v*/
 Graph *addEdge(Graph *g, int u, int v){
 	
@@ -64,7 +64,7 @@ Graph *addEdge(Graph *g, int u, int v){
 	g->array[v].head = temp2;
 	
 	return g;
-	}	
+}	
 
 void printGraph(Graph *g)
 {
@@ -92,4 +92,4 @@ int main(void){
 	printGraph(g);
 	
 	return 0;
-	}
+}
