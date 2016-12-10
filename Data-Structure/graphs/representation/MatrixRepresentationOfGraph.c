@@ -29,10 +29,10 @@ Graph * createAdjMatrixOfGraph(Graph *g){
 		scanf("%d %d", &u, &v);
 		g->adjMatrix[u][v] = 1;
 		g->adjMatrix[v][u] = 1;
-		}
+	}
 			
 	return g;
-	}
+}
 
 void printGraph(Graph *g){
 	
@@ -50,9 +50,9 @@ void printGraph(Graph *g){
 				}
 			else
 				printf("0 ");
-			}
 		}
 	}
+}
 	
 int main(void){
 	
@@ -62,6 +62,6 @@ int main(void){
 	printGraph(g);
 		
 	return 0;
-	}
+}
 
 
