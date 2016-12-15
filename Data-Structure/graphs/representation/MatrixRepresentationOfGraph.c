@@ -20,7 +20,7 @@ Graph * createAdjMatrixOfGraph(Graph *g){
 	printf("Enter the number of Vertices and Edges:");
 	scanf("%d%d", &g->nVertices, &g->nEdges);
 	
-	g->adjMatrix = (int **)malloc(sizeof(int) * g->nVertices);
+	g->adjMatrix = (int **)malloc(sizeof(int *) * g->nVertices);
 	for(i = 0; i < g->nVertices; i++)
 		g->adjMatrix[i] = (int *)malloc(sizeof(int) * g->nVertices);
 	
