@@ -6,13 +6,13 @@ typedef struct graph{
 	int nVertices;   //number of vertices in the graph
 	int nEdges;      //number of edges in the graph
 	int **adjMatrix;
-	}Graph;
+}Graph;
 
 /*node of a Queue data structure*/	
 typedef struct QueueNode{
 	int data;
 	struct QueueNode *next;
-	}queueNode;
+}queueNode;
 
 queueNode *head = NULL;
 	
@@ -32,7 +32,7 @@ void enqueue( int item){
 		temp->next = list;
 		
 	head = temp;
-	}
+}
 
 /*deleting from a queue data structure */
 int dequeue(){
@@ -51,13 +51,14 @@ int dequeue(){
 		head = NULL;
 		free(list);
 		return itemDequeued;
-		}
+	}
    /* at the end of loop temp points to second last queueNode*/
-	else
+	else{
 		while(list->next){
 			temp = list;
 			list = list->next;
-			}
+		}
+	}
 			
 	itemDequeued = list->data;
 	temp->next = NULL;
@@ -76,7 +77,8 @@ Graph * createAdjMatrixOfGraph(Graph *g){
 	printf("Enter the number of Vertices and Edges:");
 	scanf("%d%d", &g->nVertices, &g->nEdges);
 	
-	g->adjMatrix = (int **)malloc(sizeof(int) * g->nVertices);
+	g->adjMatrix = (int **)malloc(sizeof(int *) * g->nVertices);
+	
 	for(i = 0; i < g->nVertices; i++)
 		g->adjMatrix[i] = (int *)malloc(sizeof(int) * g->nVertices);
 	
@@ -85,10 +87,10 @@ Graph * createAdjMatrixOfGraph(Graph *g){
 		scanf("%d %d", &u, &v);
 		g->adjMatrix[u][v] = 1;
 		g->adjMatrix[v][u] = 1;
-		}
+	}
 			
 	return g;
-	}
+}
 
 void printGraph(Graph *g){
 	
@@ -97,7 +99,6 @@ void printGraph(Graph *g){
 	printf("\n***Adjacency Matrix of Graph***\n");
 
 	for(i = 0 ; i < g->nVertices; i++ ){
-		
 		printf("\n\t");
 		for(j = 0 ; j < g->nVertices; j++ ){
 			
@@ -106,9 +107,9 @@ void printGraph(Graph *g){
 				}
 			else
 				printf("0 ");
-			}
 		}
 	}
+}
 	
 	
 void breadthFirstTraversal(Graph *g, int u, int *visited){
@@ -129,11 +130,10 @@ void breadthFirstTraversal(Graph *g, int u, int *visited){
 			if( (g->adjMatrix[vertexDequeued][i]) && ( !(visited[i]) ) ){
 				visited[i] = 1;
 				enqueue(i);
-				
-				}
 			}
 		}
 	}
+}
 	
 int main(void){
 	
@@ -149,6 +149,6 @@ int main(void){
 	breadthFirstTraversal(g, 2, visited);
 		
 	return 0;
-	}
+}
 
 
