@@ -5,7 +5,7 @@ typedef struct graph{
 	int nVertices;   //number of vertices in the graph
 	int nEdges;      //number of edges in the graph
 	int **adjMatrix;
-	}Graph;
+}Graph;
 	
 Graph * createAdjMatrixOfGraph(Graph *);	
 	
@@ -28,10 +28,10 @@ Graph * createAdjMatrixOfGraph(Graph *g){
 		scanf("%d %d", &u, &v);
 		g->adjMatrix[u][v] = 1;
 		g->adjMatrix[v][u] = 1;
-		}
+	}
 			
 	return g;
-	}
+}
 	
 void printGraph(Graph *g){
 	
@@ -46,12 +46,12 @@ void printGraph(Graph *g){
 			
 			if( g->adjMatrix[i][j] ){
 				printf("1 ");
-				}
+			}
 			else
 				printf("0 ");
-			}
 		}
 	}
+}
 		
 
 void depthFirstTraversal(Graph *g, int u, int *visited){
@@ -63,11 +63,10 @@ void depthFirstTraversal(Graph *g, int u, int *visited){
 		
 		if( (g->adjMatrix[u][i]) && ( !(visited[i]) ) ){
 			
-			depthFirstTraversal(g, i, visited);
-			
-			}
+			depthFirstTraversal(g, i, visited);			
 		}
 	}
+}
 	
 int main(void){
 	
@@ -83,6 +82,4 @@ int main(void){
 	depthFirstTraversal(g, 2, visited);
 		
 	return 0;
-	}
-
-
+}
