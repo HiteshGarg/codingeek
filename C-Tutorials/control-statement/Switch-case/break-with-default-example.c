@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 int main()
 {
     int ch;
     printf("Enter 1 for square, 2 for triangle, 3 for rectangle and 4 for circle :\n");
     scanf("%d",&ch);
+	
     switch(ch)
     {
     case 1:

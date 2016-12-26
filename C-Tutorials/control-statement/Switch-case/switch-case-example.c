@@ -1,11 +1,13 @@
 #include <stdio.h>
+
 int main()
 {
     int ch,a=16,b=5;
     double result=0.0;
     printf("Enter 1 for addition, 2 for subtraction, 3 for multiplication and 4 for division :\n");
     scanf("%d",&ch);
-    switch(ch)
+    
+	switch(ch)
     {
     case 1:
         result=16+5;
