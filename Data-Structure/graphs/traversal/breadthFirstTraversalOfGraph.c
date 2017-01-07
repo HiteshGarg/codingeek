@@ -122,7 +122,10 @@ void breadthFirstTraversal(Graph *g, int u, int *visited){
 	for(j = 0; j < g->nVertices; j++){
 		
 		vertexDequeued = dequeue();
-			
+		
+		if(vertexDequeued == INT_MIN)
+			return;
+		
 		printf(" %d", vertexDequeued);
 	
 		for(i = 0; i < g->nVertices; i++){
