@@ -11,6 +11,7 @@ int main()
         c[i] = a[i] + b[i];//summing up the values of the two arrays
     }
     
+    printf("Resulting array after sum is");
     //displaying the array elements after summing up
     for(i=0 ;i<3 ;i++){
         printf("%d  \n",c[i]);
