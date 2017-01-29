@@ -17,11 +17,13 @@ int main()
                     {4,35,19},
                     {8,13,2}}};
     //second array shall have user input values and third array stores the sum of the other two
-    int b[3][3][3],c[3][3][3];
-    int i,j,k;
+    int b[3][3][3], c[3][3][3];
+    int i, j, k;
+    
     //input elements into the second array
     printf("Enter the elements in the array:\n");
-    for(i=0 ;i<3 ;i++){
+    
+    for(i=0 ;i < 3; i++){
         for(j=0 ;j<3 ;j++){
             for(k=0 ;k<3 ;k++){
                 scanf("%d",&b[i][j][k]);
@@ -29,7 +31,9 @@ int main()
             }
         }
     }
+    
     printf("The sum of the two arrays : \n");
+    
     for(i=0 ;i<3 ;i++){ //the outer loop is for the set of rows and columns
         for(j=0 ;j<3 ;j++){ //this middle loop is for the rows
             for(k=0 ;k<3 ;k++){ //this inner loop is for the columns
@@ -37,5 +41,6 @@ int main()
             }printf("\n");
         }printf("\n");
     }
+    
     return 0;
 }
