@@ -13,11 +13,11 @@ public class ArrayToListConversion {
      final String arr[] = new String[] { "C", "O", "D", "I","N", "G", "E", "E", "K" };
 
      // convert array to list - FIXED SIZE IMMUTABLE LIST
-     final List<String> list = Arrays.asList(sArray);
+     final List<String> list = Arrays.asList(arr);
      System.out.println("Immutable list - " + list);
 
      // convert array to list - Non immutable list, can add and perform other operations
-     final List<String> list2 = new ArrayList<>(Arrays.asList(sArray));
+     final List<String> list2 = new ArrayList<>(Arrays.asList(arr));
      System.out.println("Non Immutable list - " + list2);
 
   }
