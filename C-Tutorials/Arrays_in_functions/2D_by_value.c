@@ -1,5 +1,5 @@
 #include <stdio.h>
-void display(int a[2][2]);//declaring a function which takes a two dimensional integer array as an argument
+void display(int a[][2]);//declaring a function which takes a two dimensional integer array as an argument
 int main()
 {
     int num[2][2],i,j;
@@ -12,7 +12,7 @@ int main()
     display(num);//the whole 2D array gets passed to the function display()
     return 0;
 }
-void display(int a[2][2])//the formal parameter takes a sized array as argument
+void display(int a[][2])//the formal parameter takes an array as argument. Only first dimension is skippable
 {
     int i,j;
     printf("The matrix is:\n");//the matrix is displayed using two for loops
