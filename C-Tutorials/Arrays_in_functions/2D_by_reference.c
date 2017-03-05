@@ -32,4 +32,3 @@ int main() {
 	print ( arr ,  row, col);
 	return 0;
 }
- 
