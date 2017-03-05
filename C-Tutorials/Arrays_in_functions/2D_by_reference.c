@@ -1,26 +1,28 @@
-#include <stdio.h>
-void display(int *a[2][2])//the formal parameter takes a sized array as argument
-{
-    int i,j;
-    printf("The matrix is:\n");//the matrix is displayed using two for loops
-    for(i=0 ;i<2 ;i++)
-    {
-        for(j=0 ;j<2 ;j++)
-            printf("%d ",a[i][j]);
-        printf("\n");
+#include<stdio.h>
+#include<stdlib.h>
+void print( int ** arr , int row, int col ){
+    int i , j;
+    for ( i = 0; i < row; i++) {
+            for( j = 0; j < col; j++)
+                    printf("%d " , arr[i][j]);
+            printf("\n");
     }
 }
-int main()
-{
-    int num[2][2],i,j;
-    int *x;//declaring a pointer to store the address of the array.
-    printf("Enter 2x2 numbers:\n");
-    for(i=0 ;i<2 ;i++){
-        for(j=0 ;j<2 ;j++){
-            scanf("%d",&num[i][j]);
-        }
+int main() {
+    int row, col, i , j;
+    scanf("%d" , &row);
+    scanf("%d" , &col);
+    int **arr = (int **) malloc( sizeof( int*) * row);
+    for( i = 0; i < row; i++) {
+            arr[i] = (int * ) malloc( sizeof( int ) * col );
     }
-    x=&num;//storing the address of the array
-    display(x);//passing by reference-sending the address of the array.
+    //now Scan or initialise
+    for( i = 0; i < row; i++) {
+            for( j = 0; j < col; j++)
+                    scanf("%d" , &arr[i][j]);
+    }
+    // pass the array to function print as 
+    print ( arr ,  row, col);
+    return 0;
 }
-
+ 
