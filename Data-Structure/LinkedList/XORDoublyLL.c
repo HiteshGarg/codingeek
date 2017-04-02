@@ -4,14 +4,14 @@
 typedef struct node{
 	int data;
 	struct node *xorLink;
-	}Node;
+}Node;
 
 Node *createNode(int data){
 	Node *p = (Node *)malloc(sizeof(Node));
 	p->data = data;
 	p->xorLink = NULL;
 	return p;
-	}
+}
 	
 /* nodes are inserted at the beginning of linked list*/	
 Node * insert(Node *p, int data){
@@ -21,24 +21,24 @@ Node * insert(Node *p, int data){
 /* if this is the first node*/
 	if(!p){
 		p = nNode;
-		}
+	}
 /* if this one is the second node*/		
 	else if(!p->xorLink){
 	/* the new node added as beginning node will have no prev node, hence 
 	 * its link contain XORing of 0 with next node*/		
 		nNode->xorLink = 0 ^ (unsigned int)p;	
 		p->xorLink = (unsigned int)nNode ^ 0; 
-		}
+	}
 /* if this one is neither second or first node*/		
 	else{
 		nNode->xorLink = 0 ^ (unsigned int)p;
 		/* every intermediate node will contain link as XORing of nodes prev 
 		 * and next to it*/
 		p->xorLink = (unsigned int)nNode ^ (unsigned int)(p->xorLink);
-		}
+	}
 		
 	return nNode;
-	}
+}
 	
 /* this will delete the node at the beginning of list*/	
 Node * delete(Node *p){
@@ -52,7 +52,7 @@ Node * delete(Node *p){
 	else if(!p->xorLink){
 		free(p);
 		p = NULL;
-		}
+	}
 		
 	else{
 		/* if the list contain two nodes only*/
@@ -60,12 +60,12 @@ Node * delete(Node *p){
 			temp = p;
 			p = p->xorLink;
 			p->xorLink = NULL;
-			}
+		}
 		/* list contain more than two nodes*/	
 		else{
 			temp = p;
 			p = p->xorLink;
-		p->xorLink = (unsigned int)p->xorLink ^ (unsigned int)temp;
+			p->xorLink = (unsigned int)p->xorLink ^ (unsigned int)temp;
 		}
 	free(temp);	
 	}
@@ -102,4 +102,4 @@ int main(void){
 	display(head);
 	
 	return 0;
-	}
+}
