@@ -14,7 +14,7 @@ int main()
     /*The corresponding values of the increment and decrement operations on pointer variable y are given below*/
     printf("y= %d\n",y);//printing the actual value of y
     y++;
-    printf("y++= %d\n",y);//the value gets incremented by 1 byte because the size of one int variable is 4 bytes
+    printf("y++= %d\n",y);//the value gets incremented by 1 byte because the size of one char variable is 1 bytes
     y--;
     printf("y--= %d\n",y);//the value gets decremented by 1 byte and changes back to the original value
     return 0;
