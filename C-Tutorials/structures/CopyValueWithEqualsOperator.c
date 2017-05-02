@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <String.h>
+#include <string.h>
 int main()
 {
     struct student{//declaring a structure to store student details
