@@ -3,15 +3,17 @@ int main()
 {
     struct student//declaring the structure with name student
     {
-    char name[10];//stores the name of the student
-    int id;//stores the ID of the student
-    float marks;//stores the marks of the student
+        char name[10];//stores the name of the student
+        int id;//stores the ID of the student
+        float marks;//stores the marks of the student
     };
+    
     /*initializing values to all the structure variables*/
     struct student s1={"Ram",101,79.0};
     struct student s2={"Mohan",102,99.0};
     struct student s3={"Rohan",103,55.0};
     struct student s4={0};//all values initialized as 0
+    
     /*displaying student details*/
     printf("Details of student1:\n");
     printf(" Name= %s\n ID= %d\n marks= %f\n\n",s1.name,s1.id,s1.marks);
