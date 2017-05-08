@@ -75,35 +75,32 @@ Node *balance(Node *p){
 	int bFactor, hL, hR;  /* hL & hR: height of left subtree and right subtree*/
 	Node *pLeft, *pRight; /*pLeft & pRight: left and right subtree of root p */
 	
-	if(!p->left)
+	if(!p->left){
 		hL = 0;
-	else
+	} else{
 		hL = p->left->height + 1;
-		
-	if(!p->right)
+	}
+	if(!p->right){
 		  hR = 0;
-	else
+	} else{
 		  hR = p->right->height + 1;
-
-			
+	}
 	bFactor = hL - hR;
 	
-	if(bFactor  < 2 && bFactor > -2)
+	if(bFactor  < 2 && bFactor > -2){
 		return p;
 		
-  else if(bFactor == 2){
+	} else if(bFactor == 2){
 		pLeft = p->left;
 		
-	  if( height(pLeft->left) > height(pLeft->right) )
+	 	if( height(pLeft->left) > height(pLeft->right) )
 			return leftLeftRotn(p);
 		else
 			return leftRightRotn(p);
-		
-		}
-	 else{
+	} else {
 			pRight = p->right;
 		
-	  if( height(pRight->right) > height(pRight->left) )
+	 	if( height(pRight->right) > height(pRight->left) )
 			return rightRightRotn(p);
 		else
 			return rightLeftRotn(p);	
@@ -135,28 +132,32 @@ Node * insert(Node *p, Node *nwNode){
     return p;
 }
  
- 
 int main(void){
  
     Node *root = NULL; 
  
+    printf("RL Rotation - \n");
     root = insert(root, newNode(50));
-	  root = insert(root, newNode(40));
-    root = insert(root, newNode(45)); //LR rotatn required
-    printf("%d\n", root->key); // after rotatn. root should be 45
+    root = insert(root, newNode(40));
+    root = insert(root, newNode(45)); //LR Rotation required
+    printf("after Rotation root of tree - %d\n", root->key); // after Rotation root should be 45
     
+    printf("RR Rotation - \n");
     root = insert(root, newNode(30));
-    root = insert(root, newNode(20)); //LL rotatn required
-    printf("%d\n", root->left->right->key); // right of left child of root should be 40
+    root = insert(root, newNode(20)); //LL Rotation required
+    printf("right of left child of root - %d\n", root->left->right->key); // right of left child of root should be 40
     
+    printf("LL Rotation - \n");
     root = insert(root, newNode(60));
-    root = insert(root, newNode(80)); //RR rotatn required
-    printf("%d\n", root->right->left->key); // left of right child of root should be 50
+    root = insert(root, newNode(80)); //RR Rotation required
+    printf("left of right child of root - %d\n", root->right->left->key); // left of right child of root should be 50
 
-	  root = insert(root, newNode(70));
+    printf("RL Rotation - \n");
+    root = insert(root, newNode(70));
     root = insert(root, newNode(90));
-    root = insert(root, newNode(65)); //RL rotatn required
-    printf("%d\n", root->right->key); //right child of root should be 70
-	
+    root = insert(root, newNode(65)); //RL Rotation required
+    printf("right child of root  - %d\n", root->right->key); //right child of root should be 70
+
     return 0;
 } 
+
