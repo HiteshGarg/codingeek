@@ -139,17 +139,17 @@ int main(void){
     printf("RL Rotation - \n");
     root = insert(root, newNode(50));
     root = insert(root, newNode(40));
-    root = insert(root, newNode(45)); //LR Rotation required
+    root = insert(root, newNode(45)); //RL Rotation required
     printf("after Rotation root of tree - %d\n", root->key); // after Rotation root should be 45
     
     printf("RR Rotation - \n");
     root = insert(root, newNode(30));
-    root = insert(root, newNode(20)); //LL Rotation required
+    root = insert(root, newNode(20)); //RR Rotation required
     printf("right of left child of root - %d\n", root->left->right->key); // right of left child of root should be 40
     
     printf("LL Rotation - \n");
     root = insert(root, newNode(60));
-    root = insert(root, newNode(80)); //RR Rotation required
+    root = insert(root, newNode(80)); //LL Rotation required
     printf("left of right child of root - %d\n", root->right->left->key); // left of right child of root should be 50
 
     printf("RL Rotation - \n");
