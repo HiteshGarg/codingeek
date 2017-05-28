@@ -3,8 +3,11 @@
 int main()
 {
     FILE *fw;
+    //adding three records to the file. It can be any desired value or can be dependent on user input. 
+    //It is hard coded only for the sake of simplicity, in real scenarios these are not hardcoded values.
+    int count=3;
+    
     /*creating a structure to store the particulars of the students from the file Doc1.txt*/
-    int count=3;//adding three records to the file. It can be any desired value.
     struct student {
         char name[20];
         int id;
@@ -17,7 +20,7 @@ int main()
 
     while(count!=0) {
         printf("Enter the name,id,age and marks of a student:\n");
-        scanf("%s%d%d%f",&s.name,&s.id,&s.age,&s.marks);
+        scanf("%s %d %d %f",&s.name,&s.id,&s.age,&s.marks);
         fwrite(&s,sizeof(s),1,fw);//writes the data stored in the function to the file
         fflush(stdin);//to flush out the data remaining in the buffer
         count--;
