@@ -4,6 +4,7 @@
 
 int main(void){
 	
+        // Using blocking IO
 	clock_t begin1 = clock();
 	char c1;
 	printf("Enter the string of length STRINGLENGTH to check:\n");
@@ -13,9 +14,7 @@ int main(void){
 	clock_t end1 = clock();
 	printf("Time taken by getchar: %f seconds\n", (double)(end1 - begin1)/CLOCKS_PER_SEC);
 	
-	
-	
-	
+         // Using NON blocking IO
 	clock_t begin2 = clock();
 	char c2;
 	printf("\nEnter the string of length STRINGLENGTH to check:\n");
@@ -24,8 +23,6 @@ int main(void){
 		c2 = getchar_unlocked();
 	clock_t end2 = clock();
 	printf("Time taken by getchar_unlocked: %f seconds\n", (double)(end2 - begin2)/CLOCKS_PER_SEC);
-	
-	
 	
 	getchar();
 	return 0;
