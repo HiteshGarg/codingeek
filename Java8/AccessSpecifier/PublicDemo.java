@@ -4,7 +4,7 @@ class Demo {
 	public void show() {
 		System.out.println("Inside class Demo");
 	}
-
+}
 /*Creating another class inside same package to access the members of Demo class*/
 public class PublicDemo {
 	public static void main(String args[]) {
