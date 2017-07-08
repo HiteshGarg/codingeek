@@ -11,10 +11,12 @@ class PrivateDemo extends Demo {
 
 /*Creating another class within the same package*/
 public class TestPrivate {
+	
 	public static void main(String args[]) {
-		PrivateDemo ob=new PrivateDemo();
+		PrivateDemo ob = new PrivateDemo();
 		ob.display();
-		Demo obj=new Demo();
+		
+		Demo obj = new Demo();
 		System.out.println("The value of a is : "+obj.a);//accessing variable a inside another class of the same package. This line will show an error message.
 	}
 }

@@ -11,8 +11,10 @@ class DefaultDemo extends Demo {
   
 /*Creating another class within the same package*/
 public class TestDefault {
+	
 	public static void main(String args[]) {
-		DefaultDemo ob=new DefaultDemo();
+		
+		DefaultDemo ob = new DefaultDemo();
 		ob.display();
 		System.out.println("The value of b is : "+ob.b);//accessing variable b inside another class within same package.
 	}
