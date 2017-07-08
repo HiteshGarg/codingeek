@@ -1,9 +1,9 @@
-class Demo1 {
+class Demo {
 	protected int a=5; //giving variable a protected access
 }
 
-/*a subclass of the class demo1 where a is declared*/
-class ProtectedDemo extends Demo1 {
+/*a subclass of the class Demo where a is declared*/
+class ProtectedDemo extends Demo {
 	protected void display() {
 	System.out.println("The value of a is : "+a); //variable a is easily accessible inside the subclass
 	}
@@ -13,6 +13,6 @@ class ProtectedDemo extends Demo1 {
 public class TestProtected {
 	public static void main(String args[]) {
 		ProtectedDemo ob=new ProtectedDemo();
-		ob.display();//calling a protected method inside another class within the same package
+		ob.display(); //calling a protected method inside another class within the same package
 	}
 }
