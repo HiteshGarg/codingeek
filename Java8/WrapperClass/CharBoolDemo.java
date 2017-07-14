@@ -9,7 +9,7 @@ public class CharBoolDemo {
 		
 		/*Some of the methods are shown below*/
 		System.out.println(ch + " is digit : " + Character.isDigit(ch) + " , isLetter : " + Character.isLetter(ch));
-		System.out.println(ch + " is Whitespace : " + Character.isWhitespace(ch1));
+		System.out.println("ch1 is Whitespace : " + Character.isWhitespace(ch1));
 		System.out.println("The logical AND of " + bool + " and " + boolval + " is " + Boolean.logicalAnd(bool,boolval));
 	}
 }
