@@ -6,7 +6,7 @@ public class AutoboxSwitchDemo {
 		Scanner in = new Scanner(System.in);
 		Integer iOb; //declaring an Integer object
 		
-		System.out.println("The the serial number of the day you wish to see : ");
+		System.out.println("Enter the serial number of the day you wish to see : ");
 		iOb = in.nextInt(); //autoboxing the int value into the Integer object iOb
 		
 		/*The switch statement automatically unboxes the Integer object iOb and extracts the int value*/
