@@ -10,7 +10,7 @@ public class TestContinue {
                 continue; //skips all the even iterations
             } else {
                 for (j = 1; j <= i; j++) {
-                    System.out.print(i);
+                    System.out.print(j);
                 }
             }
             System.out.println();
