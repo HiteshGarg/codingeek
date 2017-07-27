@@ -6,22 +6,25 @@ typedef struct listNode{
 	int key;
 	int data;
 	struct listNode *next;
-	}ListNode;
+}ListNode;
+
 typedef struct hashTableNode{
 	int bCount;          // count of elements in a block or chain
 	ListNode *next;
-	}HashTableNode;
+}HashTableNode;
+
 typedef struct hashTable{
 	int countOfElement;  //count of elements in the hash table
 	int tCapacity;       // table capacity/size/slots
 	HashTableNode *table;
-	}HashTable;
+}HashTable;
 			
 HashTable *h = NULL;
 			
 int hashFun(int data, int tCapacity){
 	return data % tCapacity;
-	}		
+}		
+
 void createHashTable(int noOfEelement){
 	
 	h = (HashTable*)malloc(sizeof(HashTable));
@@ -32,8 +35,9 @@ void createHashTable(int noOfEelement){
 	for(int i = 0; i<h->tCapacity; i++){
 		h->table[i].next = NULL;
 		h->table[i].bCount = 0;
-		}
-	}	
+	}
+}	
+
 ListNode *createNode(int data){
 	ListNode *temp;
 	temp = (ListNode *)malloc(sizeof(ListNode));
@@ -44,7 +48,8 @@ ListNode *createNode(int data){
 	temp->next = NULL;
 	
 	return temp;
-	}				
+}				
+
 int searchToHashTable(int data){
 	int index = hashFun(data, h->tCapacity);
 	ListNode *temp = h->table[index].next;
@@ -53,10 +58,11 @@ int searchToHashTable(int data){
 		if(temp->data == data) 
 			return 1;
 		temp = temp->next;
-		}
+	}
 
 	return 0;	
-	}
+}
+
 void reHash(){
 
 	HashTableNode *oldTable;
@@ -67,11 +73,11 @@ void reHash(){
 	if(!h->table){
 		printf("Allocation Failed");
 		return;
-		}
+	}
 	for(int i = 0; i<h->tCapacity; i++){
 		h->table[i].next = NULL;
 		h->table[i].bCount = 0;
-		}
+	}
 	
 	for(int i = 0; i<oldCapacity; i++){
 		ListNode *temp = oldTable[i].next, *temp2;
@@ -83,15 +89,16 @@ void reHash(){
 				temp2->next = h->table[index].next;
 				h->table[index].next = temp2;
 				h->table[index].bCount++;
-				}
+			}
 			else{
 				h->table[index].next = temp2; temp2->next = NULL;
 				h->table[index].bCount++;
-				}
-					
 			}
+					
 		}
-	}			
+	}
+}			
+
 int insertToHashTable(ListNode *newNode){
 	
 	int index = newNode->key;
@@ -117,19 +124,20 @@ int deleteToHashTable(int data){
 	while(temp){
 		if(temp->data == data){
 			if(prev != NULL){
-				prev->next = temp->next;}
-			else{
-				h->table[index].next = temp->next;}
+				prev->next = temp->next;
+            } else{
+				h->table[index].next = temp->next;
+            }
 				
 			free(temp);
 			h->table[index].bCount--;
 			h->countOfElement--;
 			return 1;
-			}
-			prev = temp; temp = temp->next;
 		}
-	return 0;
+		prev = temp; temp = temp->next;
 	}
+	return 0;
+}
 
 int main(void){
 	
@@ -172,7 +180,7 @@ int main(void){
 	
 	printf("\n\n****Hash Table before capacity get doubled****");
 	printf("\nTable Capacity = %d, Total elements = %d\n", h->tCapacity, h->countOfElement); 
-	for(int i = 0; i<h->tCapacity; i++){
+	for(int i = 0; i< h->tCapacity; i++){
 		printf("[%d]", i);
 		for(ListNode *temp = h->table[i].next; temp; temp=temp->next){
 			if(temp->next)
@@ -190,16 +198,16 @@ int main(void){
 	
 	printf("\n****Hash Table after capacity get doubled****");
 	printf("\nTable Capacity = %d, Total elements = %d\n", h->tCapacity, h->countOfElement);
-	for(int i = 0; i<h->tCapacity; i++){
+	for(int i = 0; i < h->tCapacity; i++){
 		printf("[%d]", i);
 		for(ListNode *temp = h->table[i].next; temp; temp = temp->next){
 			if(temp->next)
 				printf("%d->", temp->data);
 			else
 				printf("%d", temp->data);
-			}	
+		}	
 		printf("\n");	
-		}
+	}
 		
 	return 0;
-	}
+}
