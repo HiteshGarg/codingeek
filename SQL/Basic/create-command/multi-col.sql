@@ -9,6 +9,7 @@ ALTER TABLE table_name
 
 
 -- EXAMPLE
+
 ALTER TABLE codingeeksql 
 	ADD (Occupation VARCHAR2(30),
 	     Address VARCHAR2(50),
