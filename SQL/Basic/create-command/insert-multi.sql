@@ -1,5 +1,5 @@
 INSERT INTO 
 codingeek(Level,Course,Name)
 VALUES
-('Beginner','DS','smita'),
+('Advanced','Python','smita'),
 ('Intermediate','C','neha');
