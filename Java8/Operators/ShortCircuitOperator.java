@@ -1,37 +1,19 @@
-/*
- *The following program shows the use of the secondary Logical AND and OR(Short-circuit operators)
- */
+/*The following program shows the use of the secondary Logical AND and OR(Short-circuit operators)*/
 
- package com.codingeek.java.operators;
- public class ShortCircuitOperator {
-	 
-	 public static void main(String args[]) {
-		 int a = 3, b = 5, c = 0;
-		 
-		 if(a != 0 || b++ > 0)			//the || operator only checks the left hand side, so the value of b remains unchanged
-			 System.out.println("(a != 0 || b++ > 0) is true and value of b is : " + b);
-		 else
-			 System.out.println("(a != 0 || b++ > 0) is false");
-		 
-		 System.out.println();
-		 
-		 if(a != 0 | b++ > 0)			//the | operator checks both the operands and increments the value of b
-			 System.out.println("(a != 0 | b++ > 0) is true and value of b is : " + b);
-		 else
-			 System.out.println("(a != 0 | b++ > 0) is false");
-		 		 
-		 System.out.println();
-		 
-		 if(a != 3 && (a / c) > 5)		//The && operator only checks the left hand side thus it does not reveal any exceptions
-			 System.out.println("(a != 3 && (a / c) > 5) is true");
-		 else
-			 System.out.println("(a != 3 && (a / c) > 5) is false");
-		 
-		 System.out.println();
-		 
-		 if(a != 3 & (a / c) > 5)		//the & operator checks both the operands and it reveals exception in the thread
-			 System.out.println("(a != 3 & (a / c) > 5) is true");
-		 else
-			 System.out.println("(a != 3 & (a / c) > 5) is false"); 
-	 }
- }
+public class ShortCircuitOperator {
+	public static void main(String args[]) {
+		int denom = 0, n = 5;
+		/*The right part of the if expression will show a arithmetic exception when used with & but in this case it does not 
+		because && derives the result by only looking at the left part of the expression*/
+		if(denom != 0 && n / denom > 10) {
+			System.out.println(n/denom);
+		}
+		else 
+			System.out.println("denom is zero");
+	
+	/*Demonstration of the working of logical || operator*/
+	int a = 9, b = 10;
+	if(a > 5 || b++ != 0)
+		System.out.println(b);//this statement will print 10 despite the increment operation performed in the if statement.
+}
+}
