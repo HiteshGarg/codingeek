@@ -4,12 +4,14 @@
 class StaticDemo {
 
     public static void main(String args[]) {
-        NestedClass ob = new NestedClass();    //object to access the static nested class
-        ob.meth();                                //calls the method inside the static nested class
+        //object to access the static nested class
+        NestedClass ob = new NestedClass();
+        //calls the method inside the static nested class
+        ob.meth();
     }
 
-    static class NestedClass {                    //creation of a static nested class
-
+    //creation of a static nested class
+    static class NestedClass {
         void meth() {
             System.out.println("Inside static Inner class");
 
