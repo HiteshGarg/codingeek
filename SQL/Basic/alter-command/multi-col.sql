@@ -5,13 +5,13 @@ ALTER TABLE table_name
               column_name2 datatype[(size)],
               column_name3 datatype[(size)],
 	      ...
-            ); 
+        );
 
 
 -- EXAMPLE
 
-ALTER TABLE codingeeksql 
-	ADD (Occupation VARCHAR2(30),
+ALTER TABLE codingeeksql
+  ADD (Occupation VARCHAR2(30),
 	     Address VARCHAR2(50),
-             Phone int
-             );
+       Phone int
+  );
