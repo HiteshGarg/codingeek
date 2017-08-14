@@ -7,5 +7,5 @@ WHERE condition;
 
 --EXAMPLE:
 UPDATE Users
-SET FirstName = 'Catherine', City= 'Mumbai'
+SET FirstName = 'Catherine'
 WHERE CustomerID = 3;
