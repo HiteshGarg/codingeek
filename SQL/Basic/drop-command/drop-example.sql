@@ -6,4 +6,4 @@ DELETE FROM [table_name]
 --EXAMPLE
 
 DELETE FROM fruits 
-      WHERE vitams = 'C';
+      WHERE vitamins = 'C';
