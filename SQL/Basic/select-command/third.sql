@@ -4,6 +4,6 @@ FROM table
 WHERE condition;
 
 --EXAMPLE
-SELECT Code, Course
+SELECT Name, Code
 FROM codingeek
-WHERE Code=02;
+WHERE Course='python';
