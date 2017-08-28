@@ -1,5 +1,3 @@
-SELECT Subject
-FROM marks
+SELECT Subject FROM marks
 INTERSECT
-SELECT Subject
-FROM language;
+SELECT Subject FROM language;
