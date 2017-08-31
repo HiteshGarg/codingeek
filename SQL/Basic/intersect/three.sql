@@ -4,4 +4,4 @@ WHERE Pass_mark = 50
 INTERSECT
 SELECT Subject, Code
 FROM language
-WHERE Pass_mark > 80
+WHERE Pass_mark > 70
