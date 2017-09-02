@@ -1,0 +1,2 @@
+INSERT INTO details
+SELECT * FROM info
