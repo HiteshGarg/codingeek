@@ -1,7 +1,7 @@
-SELECT columns
-FROM table1
+SELECT column1,column2,...columnN
+FROM tables
 WHERE [conditions]
 MINUS
-SELECT columns
-FROM table2
+SELECT column1,column2,...columnN
+FROM tables
 WHERE [conditions];
