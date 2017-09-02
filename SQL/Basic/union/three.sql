@@ -1,7 +1,7 @@
-SELECT Subject, Highest
-FROM suppliers
-WHERE supplier_id > 2000
+SELECT Subject, Pass_mark
+FROM marks
+WHERE Pass_mark > 42
 UNION
-SELECT company_id, company_name
-FROM companies
-WHERE company_id > 1000
+SELECT Subject, Highest_score
+FROM language
+WHERE Highest_score > 85;
