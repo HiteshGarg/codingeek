@@ -1,5 +1,3 @@
-SELECT *
-FROM marks
+SELECT * FROM marks
 MINUS
-SELECT *
-FROM language;
+SELECT * FROM language;
