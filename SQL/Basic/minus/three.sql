@@ -1,5 +1,5 @@
-SELECT Subject
+SELECT *
 FROM marks
 MINUS
-SELECT Subject
+SELECT *
 FROM language;
