@@ -1,4 +1,4 @@
 UPDATE employee
-SET Occupation = 'Project head'
+SET Occupation = 'project head'
 WHERE Branch = 'B1'
 AND Emp_no = 124;
