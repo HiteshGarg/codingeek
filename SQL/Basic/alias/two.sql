@@ -1,3 +1,3 @@
-SELECT Subject, Pass_mark
+SELECT Subject, Code
    FROM marks AS M
-   WHERE Pass_mark <= 45;
+   WHERE M.Pass_mark <= 45;
