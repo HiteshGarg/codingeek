@@ -1,0 +1,3 @@
+SELECT *
+FROM student
+WHERE S_no NOT BETWEEN 4 AND 11;
