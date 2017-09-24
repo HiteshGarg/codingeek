@@ -1,0 +1,3 @@
+SELECT *
+FROM fruits
+WHERE Colours IS NOT NULL;
