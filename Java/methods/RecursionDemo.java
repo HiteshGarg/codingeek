@@ -30,6 +30,7 @@
 		   b = in.nextInt();
 		   
 		   for(int i = a; i <= b; i++) 
-			   System.out.println("The factorial of " + i + " = " +ob.calcFactorial(i)); //calling the function calcFactorial() to calculate the factorial of the numbers individually 
+				 //calling the function calcFactorial() to calculate the factorial of the numbers individually 
+			   System.out.println("The factorial of " + i + " = " +ob.calcFactorial(i)); 
 	   }
   }
