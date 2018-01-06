@@ -32,8 +32,8 @@ public class RecursionDemo {
         b = in.nextInt();
 
         for (int i = a; i <= b; i++)
-        //calling the function calcFactorial() to calculate the factorial of the numbers individually 
         {
+            //calling the function calcFactorial() to calculate the factorial of the numbers individually
             System.out.println("The factorial of " + i + " = " + ob.calcFactorial(i));
         }
     }
