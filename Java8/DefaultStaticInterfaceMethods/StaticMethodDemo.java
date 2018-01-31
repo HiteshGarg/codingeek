@@ -3,7 +3,7 @@
  *The following interface I1 contains an abstract method and a static method.
  */
  
-package com.codingeek.java.DefaultStaticInterfaceMethods;
+package com.codingeek.java8.DefaultStaticInterfaceMethods;
 
 public interface I1 {
 
