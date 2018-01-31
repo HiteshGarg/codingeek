@@ -4,7 +4,7 @@
  * The function of the forEachRemaining() function and tryAdvance() function is shown. 
  */
 
-package com.codingeek.java.Spliterators;
+package com.codingeek.java8.Spliterators;
 
 import java.util.*;
 import java.util.stream.*;
