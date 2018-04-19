@@ -3,7 +3,7 @@
  * It defines a functional interface called InterfaceDemo with the function getValue().
  * This function returns an integer value.
  */
-package com.codingeek.Java8.LambdaExpressions;
+package com.codingeek.Java8.lambdaExpressions;
 
 //The Functional Interface
 public interface InterfaceDemo {
