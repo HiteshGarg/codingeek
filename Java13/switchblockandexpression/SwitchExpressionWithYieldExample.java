@@ -22,7 +22,6 @@ public class SwitchExpressionWithYieldExample {
     };
   }
 
-
   private enum Month {
     JANUARY,
     FEBRUARY,
