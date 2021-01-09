@@ -4,3 +4,4 @@
 * [Junit5 Test Lifecycle @BeforeAll @BeforeEach @AfterAll @AfterEach](https://www.codingeek.com/tutorials/junit/junit5-test-lifecycle-beforeall-beforeeach-afterall-aftereach/)
 * [JUnit @DisplayName and Custom Display Name Generator](https://www.codingeek.com/tutorials/junit/junit-displayname-and-custom-display-name-generator/)
 * [A complete guide to JUnit5 Assertions](https://www.codingeek.com/tutorials/junit/junit-assertions-complete-guide/)
+* [Junit5 Assumptions - assumeTrue, assumeFalse & assumingThat with Example](https://www.codingeek.com/tutorials/junit/junit-assumptions-examples)
