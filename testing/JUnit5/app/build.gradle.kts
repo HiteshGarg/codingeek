@@ -40,3 +40,26 @@ tasks.withType<Test> {
     addTestListener(FormattedOutputTestListener())
     useJUnitPlatform()
 }
+
+tasks.register<Test>("slow"){
+    useJUnitPlatform {
+        includeTags("slow")
+    }
+}
+tasks.register<Test>("fast"){
+    useJUnitPlatform {
+        includeTags("fast")
+    }
+}
+
+tasks.register<Test>("tag-on-class"){
+    useJUnitPlatform {
+        includeTags("tag-on-class")
+    }
+}
+
+tasks.register<Test>("exclude-fast"){
+    useJUnitPlatform {
+        excludeTags("fast")
+    }
+}

@@ -7,3 +7,4 @@
 * [Junit5 Assumptions - assumeTrue, assumeFalse & assumingThat with Example](https://www.codingeek.com/tutorials/junit/junit-assumptions-examples)
 * [How to assert an exception is thrown in JUnit5 & JUnit4?](https://www.codingeek.com/tutorials/junit/assert-exception-thrown-junit/)
 * [JUnit5 @Nested Test class benefits with example](https://www.codingeek.com/tutorials/junit/junit-nested-test-example/)
+* [JUnit5 @Tag annotation with Gradle task example](https://www.codingeek.com/tutorials/junit/junit-tag-annotation-filter-example/)
