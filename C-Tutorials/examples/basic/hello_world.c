@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-void hello(){
+void hello()
+{
     printf("\nHello From Function!!!");
 }
 
-void main(){
+void main()
+{
     printf("Hello World!!");
 
     hello();
