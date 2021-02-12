@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
   //declaring the pointer for integer variable
-  int a = 5, * x;
+  int a = 5, *x;
 
   //declaring the pointer for char variable
-  char b = 'z', * y;
+  char b = 'z', *y;
 
   //storing the memory location of variable a in pointer variable x
-  x = & a;
+  x = &a;
 
   /*The corresponding values of the increment and decrement operations on pointer variable x are given below*/
   //printing the actual value of x
@@ -23,7 +24,7 @@ int main() {
   printf("x--= %d\n", x);
 
   //storing the memory location of variable b in pointer variable y
-  y = & b;
+  y = &b;
 
   /*The corresponding values of the increment and decrement operations on pointer variable y are given below*/
   //printing the actual value of y
