@@ -5,5 +5,6 @@
 - [Statements, Comments, DocString and Indentation in Python](https://www.codingeek.com/tutorials/python/statements-comments-docstring-indentation/)
 - [Python3 Data Types](https://www.codingeek.com/tutorials/python/python3-data-types)
 - [Python Variables and Object References](https://www.codingeek.com/tutorials/python/python-variables-and-object-references)
-- [Python Type Conversion](https://www.codingeek.com/tutorials/python/python-type-conversion/?swcfpc=1)
-- [Python Modules and how to Import Python Modules?](https://www.codingeek.com/tutorials/python/python-modules-and-import/?swcfpc=1)
+- [Python Type Conversion](https://www.codingeek.com/tutorials/python/python-type-conversion)
+- [Python Modules and how to Import Python Modules?](https://www.codingeek.com/tutorials/python/python-modules-and-import)
+- [Python I/O – Take User Input and produce Output](https://www.codingeek.com/tutorials/python/python-io-user-input-ouput/)
