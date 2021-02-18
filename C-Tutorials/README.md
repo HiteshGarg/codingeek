@@ -48,3 +48,5 @@
 - [How to Print an Integer, long, double entered by User in a C Program?](https://www.codingeek.com/tutorials/c-programming/example/print-integer-long-double-user-input/)
 - [C Program to find Sum of first ‘n’ Natural numbers](https://www.codingeek.com/tutorials/c-programming/example/find-sum-first-n-natural-numbers/)
 - [C Program to Print Nth Fibonacci number](https://www.codingeek.com/tutorials/c-programming/example/print-nth-fibonacci-number/)
+- [C Program to check whether the given number is a Palindrome or Not](https://www.codingeek.com/tutorials/c-programming/example/check-palindrome-numbers/)
+- [Program to find the greatest of three numbers in C](https://www.codingeek.com/tutorials/c-programming/example/find-greatest-of-three-numbers/)
