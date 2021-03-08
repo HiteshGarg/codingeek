@@ -12,3 +12,9 @@
 
 ## Conditional Statements
 - [Python if-elif-else – Conditional Statements](https://www.codingeek.com/tutorials/python/if-elif-else/)
+
+
+## Loops
+- [Python for Loop - range, Index, break, continue](https://www.codingeek.com/tutorials/python/for-loop/)
+
+
