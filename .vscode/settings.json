@@ -1,5 +1,9 @@
 {
   "editor.tabSize": 2,
   "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  "python.pythonPath": "/usr/local/opt/python@3.9/bin/python3.9"
+  "python.pythonPath": "/usr/local/opt/python@3.9/bin/python3.9",
+  "editor.insertSpaces": true,
+  "python.formatting.autopep8Args": [
+    "--indent-size=2"
+  ],
 }
