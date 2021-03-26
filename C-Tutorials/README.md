@@ -61,7 +61,17 @@
 - [C Program to find the size of int, float, double and char](https://www.codingeek.com/tutorials/c-programming/example/sizeof-operator/)
 - [C Program to check leap year](https://www.codingeek.com/tutorials/c-programming/example/check-leap-year/)
 - [C program to display palindrome numbers in a given range](https://www.codingeek.com/tutorials/c-programming/example/palindrome-numbers-range)
+
+### String Examples Programs
 - [C Program to convert a string from lowercase to uppercase](https://www.codingeek.com/tutorials/c-programming/example/string-lower-to-uppercase/)
 - [C Program to convert a string from Uppercase to Lowercase](https://www.codingeek.com/tutorials/c-programming/example/string-upper-to-lowercase/)
 - [C Program to concatenate string without using strcat()](https://www.codingeek.com/tutorials/c-programming/example/concatenate-string/)
 - [C Program to find string length without using strlen()](https://www.codingeek.com/tutorials/c-programming/example/length-string/)
+- [Sort String characters in alphabetically ascending order](https://www.codingeek.com/tutorials/c-programming/example/sort-string-characters-asc/)
+- [Find the reverse of a String using recursion](https://www.codingeek.com/tutorials/c-programming/example/reverse-string/)
+
+### Array Example Programs
+- [Sort array in ascending order](https://www.codingeek.com/tutorials/c-programming/example/sort-array-ascending/)
+- [Find the largest element of the given array](https://www.codingeek.com/tutorials/c-programming/example/array-largest-element/)
+- [Find the sum of array elements](https://www.codingeek.com/tutorials/c-programming/example/sum-array-elements/)
+- [Find the number of elements in an array](https://www.codingeek.com/tutorials/c-programming/example/array-length/)
