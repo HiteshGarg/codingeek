@@ -75,3 +75,17 @@
 - [Find the largest element of the given array](https://www.codingeek.com/tutorials/c-programming/example/array-largest-element/)
 - [Find the sum of array elements](https://www.codingeek.com/tutorials/c-programming/example/sum-array-elements/)
 - [Find the number of elements in an array](https://www.codingeek.com/tutorials/c-programming/example/array-length/)
+
+
+### Pointer Programs
+- [Find the largest of three numbers using Pointers](https://www.codingeek.com/tutorials/c-programming/example/largest-three-numbers-pointers/)
+- [Count vowels and consonants in a string using a pointer](https://www.codingeek.com/tutorials/c-programming/example/count-vowels-consonants-string-pointer/)
+- [Print String using Pointer](https://www.codingeek.com/tutorials/c-programming/example/print-string-pointer/)
+- [Swap two Numbers using Pointers](https://www.codingeek.com/tutorials/c-programming/example/swap-two-numbers-pointers/)
+- [Create, Initialize and Access a Pointer variable](https://www.codingeek.com/tutorials/c-programming/example/create-initialize-access-pointer/)
+
+### Calculation Based Programs
+- [Multiply two floating numbers](https://www.codingeek.com/tutorials/c-programming/example/multiply-floating-numbers/)
+- [Find the average of two numbers](https://www.codingeek.com/tutorials/c-programming/example/average-two-numbers/)
+- [Calculate out Quotient and Remainder](https://www.codingeek.com/tutorials/c-programming/example/quotient-remainder/)
+- [Calculate the value of nPr for a given value of n & r](https://www.codingeek.com/tutorials/c-programming/example/calculate-npr/)
