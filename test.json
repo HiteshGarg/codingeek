@@ -1,4 +1,5 @@
 [ 
-  {"name": "Default", "value": "DHL,Hermes"}, 
-  {"name": "SomeCountry", "value": "FedEx"}
+  {"name": "Default", "value": "default"}, 
+  {"name": "Germany", "value": "Germany"},
+  {"name": "Sweden", "value": "Sweden"},
 ]
