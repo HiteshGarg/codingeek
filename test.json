@@ -1,5 +1,4 @@
 [ 
-  {"name": "Afghanistan", "value": "AF"}, 
-  {"name": "India", "value": "IN"}, 
-  {"name": "Albania", "value": "AL"}
+  {"name": "Default", "value": "DHL,Hermes"}, 
+  {"name": "SomeCountry", "value": "FedEx"}
 ]
