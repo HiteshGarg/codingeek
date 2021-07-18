@@ -41,7 +41,7 @@ int findGreatestUsingNestedIf(int a, int b, int c) {
   }
   // if b is greater than both a and c then b is the greatest number.
   // or else c will be the greater number.
-  else { 
+  else {
     if (b >= c)
       return b;
     else

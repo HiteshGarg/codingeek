@@ -1,16 +1,12 @@
 #include <stdio.h>
 
-void hello()
-{
-    printf("\nHello From Function!!!");
-}
+void hello() { printf("\nHello From Function!!!"); }
 
-void main()
-{
-    printf("Hello World!!");
+void main() {
+  printf("Hello World!!");
 
-    hello();
+  hello();
 
-    printf("\nCoding is fun with Codingeek.");
-    return 0;
+  printf("\nCoding is fun with Codingeek.");
+  return 0;
 }

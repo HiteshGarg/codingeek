@@ -23,9 +23,9 @@ int main() {
   }
 
   printf("The strings are:\n");
-  
-	for (i = 0; i < 5; i++)
+
+  for (i = 0; i < 5; i++)
     printf("%s\n", names[i]);
-  
-	return 0;
+
+  return 0;
 }

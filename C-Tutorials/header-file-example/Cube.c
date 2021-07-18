@@ -1,4 +1,1 @@
-int cube(int n)
-{
-    return n*n*n;
-}
+int cube(int n) { return n * n * n; }

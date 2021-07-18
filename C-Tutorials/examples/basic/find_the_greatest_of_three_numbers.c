@@ -1,16 +1,16 @@
 #include <stdio.h>
-//Using only if statement
+// Using only if statement
 int findGreatestOf3Numbers(int a, int b, int c) {
   // if a is greater than both b and c, a is the greatest
-  if (a >= b && a >= c){
+  if (a >= b && a >= c) {
     return a;
   }
   // if b is greater than both a and c, b is the greatest
-  if (b >= a && b >= c){
+  if (b >= a && b >= c) {
     return b;
   }
   // if c is greater than both a and b, c is the greatest
-  if (c >= a && c >= b){
+  if (c >= a && c >= b) {
     return c;
   }
   return 0; // this will never run

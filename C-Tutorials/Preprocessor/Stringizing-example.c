@@ -9,11 +9,11 @@
 #define WELCOME_MSG STR S_DOMAIN
 
 int main() {
-	
-	//When we actually pass some value
-	printf("%s",STRINGIFY(Hello));
-	
-	// When it is pre calculated
-	printf("\n%s",WELCOME_MSG);
-	return 0;
+
+  // When we actually pass some value
+  printf("%s", STRINGIFY(Hello));
+
+  // When it is pre calculated
+  printf("\n%s", WELCOME_MSG);
+  return 0;
 }

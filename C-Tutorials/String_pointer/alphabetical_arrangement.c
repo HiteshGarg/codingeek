@@ -17,7 +17,7 @@ int main() {
       // compares the two string and returns an integer value
       // if the value of a is greater than 0 then swapping begins
       a = strcmp(names[i], names[j]);
-      
+
       if (a > 0) {
         temp = names[i];
         names[i] = names[j];

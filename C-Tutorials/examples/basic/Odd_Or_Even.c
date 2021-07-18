@@ -1,4 +1,4 @@
-//using if-else
+// using if-else
 #include <stdio.h>
 int number;
 void oddOrEven() {
@@ -9,15 +9,14 @@ void oddOrEven() {
   }
 }
 
-//using bitwise operator
-//void oddOrEven() {
+// using bitwise operator
+// void oddOrEven() {
 // if (number & 1) {
 // printf("Number is Odd");
 // } else {
 // printf("Number is Even");
 // }
 //}
-
 
 int main() {
   printf("Enter the value: ");

@@ -1,4 +1,4 @@
-//using loop
+// using loop
 #include <stdio.h>
 void printPrime(int lowervalue, int uppervalue) {
   int i, j;
@@ -12,12 +12,9 @@ void printPrime(int lowervalue, int uppervalue) {
   }
 }
 /*//using Functions
-//We will just update the method printPrime as the main method will remain the same.
-int isPrime(int number) {
-  int k;
-  for (k = 2; k <= number / 2; k++) {
-    if (number % k == 0) {
-      return 0;
+//We will just update the method printPrime as the main method will remain the
+same. int isPrime(int number) { int k; for (k = 2; k <= number / 2; k++) { if
+(number % k == 0) { return 0;
     }
   }
   return 1;

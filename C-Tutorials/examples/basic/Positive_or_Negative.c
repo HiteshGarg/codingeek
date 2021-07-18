@@ -9,7 +9,8 @@ void checkIfNumberIsPositiveOrNegative() {
   }
 }
 /*positive or negative Number using ternary operator.
-->We will just update the method checkIfNumberIsPositiveOrNegative()as the main method will remain the same.
+->We will just update the method checkIfNumberIsPositiveOrNegative()as the main
+method will remain the same.
 
 void checkIfNumberIsPositiveOrNegative() {
   num >= 0 ? printf("number is positive.") : printf("number is negative.");

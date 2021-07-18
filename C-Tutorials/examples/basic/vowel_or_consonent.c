@@ -1,11 +1,8 @@
 #include <stdio.h>
 
 void checkIfVowelOrConsonant(char ch) {
-  if (ch == 'a' || ch == 'A' || 
-      ch == 'e' || ch == 'E' || 
-      ch == 'i' || ch == 'I' ||
-      ch == 'o' || ch == 'O' ||
-      ch == 'u' || ch == 'U')
+  if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' ||
+      ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U')
     printf("%c Is a vowel.\n", ch);
   else
     printf("%c Is a consonant.\n", ch);
@@ -28,7 +25,6 @@ void checkIfVowelOrConsonant(char ch) {
 //   default:
 //     printf("%c is a Consonant.\n", ch);
 //   }
-
 
 int main() {
   char ch;
