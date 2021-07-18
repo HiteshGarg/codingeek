@@ -3,3 +3,7 @@
 **/*.iml
 out/*
 */venv/*
+**/*/test
+
+# C Programs
+C-Tutorials/**/test
