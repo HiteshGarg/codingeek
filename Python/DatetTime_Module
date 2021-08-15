@@ -1,0 +1,117 @@
+from datetime import date
+  
+# Initializing Constructor with year, month and date format
+today_date = date(2021, 8, 11)
+  
+print("Value provided as argument is", today_date)
+print("\n")
+  
+today_date = date(2021, 8, 41) # It will raise an ValueError 
+today_date = date(2021, 8, 41) # It will raise an TypeError   
+
+#####################################################
+
+from datetime import date
+
+date_today = date.today()
+
+print("The date is: ", date_today)
+print("Year is:", date_today.year)
+print("Month is:", date_today.month)
+print("Day is:", date_today.day)
+
+#####################################################
+
+from datetime import date
+
+timestamp = date.fromtimestamp(1599999964)
+
+print("The date for 1599999964 seconds is =", timestamp)
+
+#####################################################
+
+from datetime import time
+  
+# Initializing the constructor
+time_value = time(12, 37, 41)
+  
+print("Time is", time_value)
+  
+time_value = time(minute = 17)
+print("\nTime with one provided argument", time_value)
+  
+time_value = time(minute = 12, second = 39)
+print("\nTime with two provided argument", time_value)
+
+time_value = time()
+print("\nTime with no argument", time_value)
+  
+time_value = time(13, 24, 56)
+#It will rase an ValueError  
+time_value = time(13, 2.4, 56)
+#It will rase an TypeError
+
+####################################################
+
+from datetime import datetime
+  
+# Initializing constructor
+value1 = datetime(2021, 8, 18)
+print(value1)
+  
+value2 = datetime(2021, 8, 11, 11, 11, 11, 45480)
+print(value2)
+
+###################################################
+
+from datetime import datetime
+  
+exact_time_now = datetime.now()
+  
+print("Current date and time is: ", exact_time_now)
+
+###################################################
+
+from datetime import datetime, timedelta 
+    
+current_time_date = datetime.now() 
+    
+print ("current_date", str(current_time_date)) 
+    
+# Calculating future dates 
+# for two years 
+Date_after_5yrs = current_time_date + timedelta(days = 1826) 
+    
+Date_after_5days = current_time_date + timedelta(days = 5) 
+    
+# printing calculated future_dates 
+print('Date and time after 5 years:', str(Date_after_5yrs)) 
+print('Date and time after 2 days:', str(Date_after_5days)) 
+
+###################################################
+
+from datetime import timedelta
+
+time1 = timedelta(weeks = 4, days = 3, hours = 1, seconds = 53)
+time2 = timedelta(days = 3, hours = 11, minutes = 22, seconds = 29)
+diff = time1 - time2
+
+print("Difference between two time is: ", diff)
+
+###################################################
+
+from datetime import datetime
+import pytz
+
+local = datetime.now()
+print("Localtime:", local.strftime("%m/%d/%Y, %H:%M:%S"))
+
+tz_NY = pytz.timezone('America/New_York') 
+datetime_NY = datetime.now(tz_NY)
+print("Time at NewYork:", datetime_NY.strftime("%m/%d/%Y, %H:%M:%S"))
+
+tz_London = pytz.timezone('Europe/London')
+datetime_London = datetime.now(tz_London)
+print("Time at London:", datetime_London.strftime("%m/%d/%Y, %H:%M:%S"))
+
+####################################################
